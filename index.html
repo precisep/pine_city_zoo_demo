@@ -2,6 +2,11 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <link rel="manifest" href="manifest.json">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Pine City Zoo">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="apple-touch-icon" href="images/logo.png">
     </head>
     <body>
         <div id="header">
@@ -18,6 +23,11 @@
         <div id="tabs-bottom">
             <a href="weather.html">WEATHER</a>
             <a href="feedback.html">FEEDBACK</a>
-        </div>        
+        </div> 
+        <script>
+            if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.register('service-worker.js');
+              }
+        </script>       
     </body>
 </html>
